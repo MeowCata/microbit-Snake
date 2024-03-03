@@ -1,5 +1,5 @@
 
-> Open this page at [https://chinatow789.github.io/snakepro/](https://chinatow789.github.io/snakepro/)
+> Open this page at [https://chinatow789.github.io/snakepro/](https://meowcata.github.io/snakepro/)
 
 ## Use as Extension
 
