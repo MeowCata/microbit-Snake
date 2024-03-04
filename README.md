@@ -21,5 +21,3 @@ To edit this repository in MakeCode.
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * click on **Import** then click on **Import URL**
 * paste **https://github.com/meowcata/snakepro** and click import
-
-> Open this page at [https://meowcata.github.io/microbit-snake/](https://meowcata.github.io/microbit-snake/)
