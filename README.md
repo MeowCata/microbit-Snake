@@ -3,6 +3,10 @@
 
 open-sourced snake game based on **micro-bit**
 
+made by a *middle school student: [DingDang](https://github.com/MeowCata)*
+
+**Please follow the open-source protocol! *Enjoy!***
+
 ---
 
 ## How to play it?
