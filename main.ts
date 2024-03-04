@@ -73,7 +73,6 @@ function ReplayMod () {
         basic.pause(200)
     }
     basic.pause(500)
-    basic.pause(200)
     clearScreenExcept(-1, -1)
 }
 function clearScreenExcept (x: number, y: number) {
