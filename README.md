@@ -29,7 +29,7 @@ made by a *middle school student: [DingDang](https://github.com/MeowCata)*
 >     HOWEVER, you have 2 lives and you will "respawn(it is so-called in Minecraft)"in the middle of the screen
 > 
 >     BUT, because of some bugs(that were not fixed),if you were tilting when you died,the respawn point might not be in the middle
-> ***you won't die although the respawn point wasn't in the middle:)***
+> ***you won't die again although the respawn point wasn't in the middle:)***
 > 
 >**5.If your lives were all ran out,you *died*,then you can watch the whole game replay,it shows all the food you ate and all the ways your snake *walked***
 > 
