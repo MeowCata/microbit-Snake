@@ -23,20 +23,3 @@ To edit this repository in MakeCode.
 * paste **https://github.com/meowcata/snakepro** and click import
 
 > Open this page at [https://meowcata.github.io/microbit-snake/](https://meowcata.github.io/microbit-snake/)
-
-## Use as Extension
-
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/meowcata/microbit-snake** and import
-
-## Edit this project
-
-To edit this repository in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/meowcata/microbit-snake** and click import
