@@ -1,3 +1,10 @@
+function getFood () {
+    if (SnakeX == FoodX && SnakeY == FoodY) {
+        return true
+    } else {
+        return false
+    }
+}
 function Snake () {
     generateFood()
     Main()
@@ -93,13 +100,13 @@ function Initialization () {
     replayDir = []
     cnt = 0
     cntSpare = 0
-    SnakeX = 2
-    SnakeY = 2
+    // dont set to2 
+    // or else:
+    // Expectation Stack Overflow
+    SnakeX = 0
+    SnakeY = 0
     lives = 2
 }
-buttonClicks.onButtonHeld(buttonClicks.AorB.B, function () {
-    adjustAngle()
-})
 function calculateDistance (x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 }
@@ -162,7 +169,7 @@ function Main () {
             SnakeY = 2
         }
         snakeMove(angle)
-        if (SnakeX == FoodX && SnakeY == FoodY) {
+        if (getFood()) {
             replayFX[cntSpare] = FoodX
             replayFY[cntSpare] = FoodY
             cntSpare += 1
@@ -176,6 +183,9 @@ function Program () {
     adjustAngle()
     Snake()
 }
+buttonClicks.onButtonHeld(buttonClicks.AorB.A, function () {
+    adjustAngle()
+})
 function StartUp () {
     rollNum = -5
     for (let index = 0; index < 6; index++) {
@@ -204,8 +214,6 @@ function generateFood () {
 }
 let distance = 0
 let rollNum = 0
-let FoodY = 0
-let FoodX = 0
 let direction = 0
 let angle2 = 0
 let lives = 0
@@ -223,7 +231,9 @@ let replayXSpare = 0
 let replayFX: number[] = []
 let replayCnt = 0
 let indexReplay = 0
+let FoodY = 0
 let SnakeY = 0
+let FoodX = 0
 let SnakeX = 0
 let angle = 0
 let startTime = 0
