@@ -119,29 +119,31 @@ input.onButtonPressed(Button.B, function () {
         Program2()
     }
 })
-function snakeMove (Angle: number) {
-    angle2 = 0 - Angle
-    if (input.rotation(Rotation.Pitch) > Angle) {
-        SnakeY += 1
-        direction = 3
-    } else if (input.rotation(Rotation.Pitch) < angle2) {
-        SnakeY += -1
-        direction = 1
-    } else if (input.rotation(Rotation.Roll) > Angle) {
-        SnakeX += 1
-        direction = 4
-    } else if (input.rotation(Rotation.Roll) < angle2) {
-        SnakeX += -1
-        direction = 2
+function snakeMove (Angle: number, enabled: boolean) {
+    if (enabled) {
+        angle2 = 0 - Angle
+        if (input.rotation(Rotation.Pitch) > Angle) {
+            SnakeY += 1
+            direction = 3
+        } else if (input.rotation(Rotation.Pitch) < angle2) {
+            SnakeY += -1
+            direction = 1
+        } else if (input.rotation(Rotation.Roll) > Angle) {
+            SnakeX += 1
+            direction = 4
+        } else if (input.rotation(Rotation.Roll) < angle2) {
+            SnakeX += -1
+            direction = 2
+        }
+        replayX[cnt] = SnakeX
+        replayY[cnt] = SnakeY
+        replayDir[cnt] = direction
+        cnt += 1
+        led.plot(SnakeX, SnakeY)
+        basic.pause(240)
+        tailProcess(SnakeX, SnakeY, direction)
+        basic.pause(100)
     }
-    replayX[cnt] = SnakeX
-    replayY[cnt] = SnakeY
-    replayDir[cnt] = direction
-    cnt += 1
-    led.plot(SnakeX, SnakeY)
-    basic.pause(240)
-    tailProcess(SnakeX, SnakeY, direction)
-    basic.pause(100)
 }
 function tailProcess (x: number, y: number, dir: number) {
     if (dir == 3) {
@@ -168,8 +170,9 @@ function Main () {
             SnakeX = 2
             SnakeY = 2
         }
-        snakeMove(angle)
+        snakeMove(angle, true)
         if (getFood()) {
+            snakeMove(angle, false)
             replayFX[cntSpare] = FoodX
             replayFY[cntSpare] = FoodY
             cntSpare += 1
