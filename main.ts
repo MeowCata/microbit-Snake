@@ -55,7 +55,6 @@ function death () {
     } else {
         return false
     }
-    basic.pause(200)
 }
 function ReplayMod () {
     indexReplay = 0
