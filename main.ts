@@ -19,6 +19,9 @@ function Snake () {
         `)
     basic.pause(200)
     basic.clearScreen()
+    basic.showNumber(score)
+    basic.pause(500)
+    basic.clearScreen()
     ReplayMod()
 }
 function showNumber2 (num: number) {
@@ -104,6 +107,7 @@ function Initialization () {
     SnakeX = 0
     SnakeY = 0
     lives = 2
+    score = 0
 }
 function calculateDistance (x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
@@ -171,6 +175,7 @@ function Main () {
         snakeMove(angle, true)
         if (getFood()) {
             snakeMove(angle, false)
+            score += 1
             replayFX[cntSpare] = FoodX
             replayFY[cntSpare] = FoodY
             cntSpare += 1
@@ -232,6 +237,7 @@ let replayXSpare = 0
 let replayFX: number[] = []
 let replayCnt = 0
 let indexReplay = 0
+let score = 0
 let FoodY = 0
 let SnakeY = 0
 let FoodX = 0
