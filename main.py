@@ -24,8 +24,8 @@ def adjustAngle():
     while not (input.button_is_pressed(Button.A)):
         if input.rotation(Rotation.ROLL) < -30:
             angle += -5
-            if angle < 20:
-                angle = 20
+            if angle < 15:
+                angle = 15
             showNumber2(angle)
         elif input.rotation(Rotation.ROLL) > 30:
             angle += 5
@@ -63,10 +63,8 @@ def ReplayMod():
             basic.pause(200)
             tailProcess(replayXSpare, replayYSpare, replayDirS)
         led.unplot(replayXSpare, replayYSpare)
-        basic.pause(200)
         index += 1
     basic.pause(500)
-    basic.pause(200)
     clearScreenExcept(-1, -1)
 def clearScreenExcept(x: number, y: number):
     for index2 in range(5):
@@ -208,6 +206,7 @@ SnakeX = 0
 angle = 0
 startTime = 0
 led.set_brightness(100)
+led.plot_bar_graph(input.light_level(), 255)
 startTime = 0
 angle = 25
 if angle < 0:

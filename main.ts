@@ -70,7 +70,6 @@ function ReplayMod () {
             tailProcess(replayXSpare, replayYSpare, replayDirS)
         }
         led.unplot(replayXSpare, replayYSpare)
-        basic.pause(200)
     }
     basic.pause(500)
     clearScreenExcept(-1, -1)
