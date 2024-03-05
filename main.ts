@@ -66,10 +66,11 @@ function ReplayMod () {
             replayDirS = replayDir[index + indexReplay]
             indexReplay += 1
             led.plot(replayXSpare, replayYSpare)
-            basic.pause(300)
+            basic.pause(200)
             tailProcess(replayXSpare, replayYSpare, replayDirS)
         }
         led.unplot(replayXSpare, replayYSpare)
+        basic.pause(200)
     }
     basic.pause(500)
     clearScreenExcept(-1, -1)
@@ -133,7 +134,7 @@ function snakeMove (Angle: number) {
     led.plot(SnakeX, SnakeY)
     basic.pause(240)
     tailProcess(SnakeX, SnakeY, direction)
-    basic.pause(60)
+    basic.pause(100)
 }
 function tailProcess (x: number, y: number, dir: number) {
     if (dir == 3) {
