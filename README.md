@@ -38,7 +38,7 @@ made by a *middle school student: [DingDang](https://github.com/MeowCata)*
 > okay,that's all for this time | *let me have a good rest~*
 
 > [!IMPORTANT]
-> my micro:bit ver is 2.21 so I can't test my code on an elder version,*but I guess it works*
+> my micro:bit ver is 2.21 so I can't test my code on an elder version,*but the simulator shows that the code works:)*
 
 ---
 
