@@ -99,9 +99,8 @@ function Initialization () {
     replayDir = []
     cnt = 0
     cntSpare = 0
-    // dont set to2 
-    // or else:
-    // Expectation Stack Overflow
+    // dont set to 2
+    // or stack overflow
     SnakeX = 0
     SnakeY = 0
     lives = 2
