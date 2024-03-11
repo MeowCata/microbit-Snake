@@ -24,6 +24,9 @@ function Snake () {
     basic.clearScreen()
     ReplayMod()
 }
+buttonClicks.onButtonDoubleClicked(buttonClicks.AorB.A, function () {
+    Ai()
+})
 function showNumber2 (num: number) {
     basic.showNumber(Math.floor(num / 10))
     basic.showNumber(num - Math.floor(num / 10) * 10)
