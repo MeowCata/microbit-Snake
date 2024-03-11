@@ -59,6 +59,9 @@ function death () {
         return false
     }
 }
+function Ai () {
+	
+}
 function ReplayMod () {
     indexReplay = 0
     replayCnt = 0
@@ -212,7 +215,7 @@ function generateFood () {
     FoodX = randint(0, 4)
     FoodY = randint(0, 4)
     distance = Math.floor(calculateDistance(FoodX, FoodY, SnakeX, SnakeY))
-    if (distance < 3) {
+    if (distance < 1) {
         generateFood()
     } else {
         led.plot(FoodX, FoodY)
