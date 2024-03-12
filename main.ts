@@ -99,7 +99,7 @@ function clearScreenExcept (x: number, y: number) {
         }
     }
 }
-function Initialization () {
+function init () {
     startTime += 1
     replayX = []
     replayY = []
@@ -116,11 +116,13 @@ function Initialization () {
     Ay = 0
     AFx = 0
     AFy = 0
+    obstacleX = 0
+    obstacleY = 0
     AiEnabled = false
     stopped = false
 }
 buttonClicks.onButtonHeld(buttonClicks.AorB.B, function () {
-    Initialization()
+    init()
     basic.clearScreen()
     if (startTime == 1) {
         Program()
@@ -267,6 +269,8 @@ let rollNum = 0
 let direction = 0
 let angle2 = 0
 let stopped = false
+let obstacleY = 0
+let obstacleX = 0
 let AFy = 0
 let AFx = 0
 let Ay = 0
