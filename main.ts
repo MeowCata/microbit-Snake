@@ -128,6 +128,19 @@ buttonClicks.onButtonHeld(buttonClicks.AorB.B, function () {
         Program2()
     }
 })
+function shield (ShieldEnabled: boolean) {
+    if (ShieldEnabled) {
+        if (SnakeX > 4) {
+            SnakeX = 4
+        } else if (SnakeY > 4) {
+            SnakeY = 4
+        } else if (SnakeX < 0) {
+            SnakeX = 0
+        } else if (SnakeY < 0) {
+            SnakeY = 0
+        }
+    }
+}
 function calculateDistance (x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 }
