@@ -117,7 +117,7 @@ function Initialization () {
     AFx = 0
     AFy = 0
     AiEnabled = false
-    stop = false
+    stopped = false
 }
 buttonClicks.onButtonHeld(buttonClicks.AorB.B, function () {
     Initialization()
@@ -173,10 +173,10 @@ function Program2 () {
     Snake()
 }
 buttonClicks.onButtonDoubleClicked(buttonClicks.AorB.B, function () {
-    stop = true
+    stopped = true
 })
 function Main () {
-    while (!(stop)) {
+    while (!(stopped)) {
         if (death()) {
             lives += -1
             if (lives == 0) {
@@ -266,7 +266,7 @@ let distance = 0
 let rollNum = 0
 let direction = 0
 let angle2 = 0
-let stop = false
+let stopped = false
 let AFy = 0
 let AFx = 0
 let Ay = 0
