@@ -133,6 +133,7 @@ function init () {
     obsSx = 0
     obsSy = 0
     obsDis = 0
+    scoreSpare = 0
     AiEnabled = false
     stopped = false
 }
@@ -204,6 +205,7 @@ function Main () {
         }
         snakeMove(angle, true)
         if (score % 3 == 0 && score != 0) {
+            scoreSpare = score + 1
             createObs()
         }
         obsProcess()
@@ -294,6 +296,7 @@ let rollNum = 0
 let direction = 0
 let angle2 = 0
 let stopped = false
+let scoreSpare = 0
 let AFy = 0
 let AFx = 0
 let Ay = 0
