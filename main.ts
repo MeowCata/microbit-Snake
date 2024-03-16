@@ -24,18 +24,6 @@ function Snake () {
     basic.clearScreen()
     ReplayMod()
 }
-function createObs () {
-    obsSx = SnakeX
-    obsSy = SnakeY
-    obstacleX = randint(0, 4)
-    obstacleY = randint(0, 4)
-    obsDis = Math.floor(calculateDistance(obstacleX, obstacleY, obsSx, obsSy))
-    if (obsDis < 2) {
-        createObs()
-    } else {
-        led.plotBrightness(obstacleX, obstacleY, 255)
-    }
-}
 buttonClicks.onButtonDoubleClicked(buttonClicks.AorB.A, function () {
     Ai()
 })
@@ -128,12 +116,6 @@ function init () {
     Ay = 0
     AFx = 0
     AFy = 0
-    obstacleX = 0
-    obstacleY = 0
-    obsSx = 0
-    obsSy = 0
-    obsDis = 0
-    scoreSpare = 0
     AiEnabled = false
     stopped = false
 }
@@ -204,11 +186,6 @@ function Main () {
             SnakeY = 2
         }
         snakeMove(angle, true)
-        if (score % 3 == 0 && score != 0) {
-            scoreSpare = score + 1
-            createObs()
-        }
-        obsProcess()
         if (getFood()) {
             snakeMove(angle, false)
             score += 1
@@ -256,12 +233,6 @@ function Program () {
     adjustAngle()
     Snake()
 }
-function obsProcess () {
-    if (SnakeX == obstacleX && SnakeY == obstacleY) {
-        lives += -1
-        led.unplot(obstacleX, obstacleY)
-    }
-}
 buttonClicks.onButtonHeld(buttonClicks.AorB.A, function () {
     adjustAngle()
 })
@@ -296,7 +267,6 @@ let rollNum = 0
 let direction = 0
 let angle2 = 0
 let stopped = false
-let scoreSpare = 0
 let AFy = 0
 let AFx = 0
 let Ay = 0
@@ -317,11 +287,6 @@ let replayFX: number[] = []
 let replayCnt = 0
 let indexReplay = 0
 let AiEnabled = false
-let obsDis = 0
-let obstacleY = 0
-let obstacleX = 0
-let obsSy = 0
-let obsSx = 0
 let score = 0
 let FoodY = 0
 let SnakeY = 0
