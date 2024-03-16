@@ -177,6 +177,7 @@ buttonClicks.onButtonDoubleClicked(buttonClicks.AorB.B, function () {
 })
 function Main () {
     while (!(stopped)) {
+        snakeMove(angle, true)
         if (death()) {
             lives += -1
             if (lives == 0) {
@@ -185,7 +186,6 @@ function Main () {
             SnakeX = 2
             SnakeY = 2
         }
-        snakeMove(angle, true)
         if (getFood()) {
             snakeMove(angle, false)
             score += 1
