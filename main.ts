@@ -1,3 +1,6 @@
+/**
+ * special food creation
+ */
 function getFood () {
     if (SnakeX == FoodX && SnakeY == FoodY) {
         return true
@@ -213,6 +216,13 @@ function Main () {
             shieldEnabled = true
         } else {
             shieldEnabled = false
+        }
+        if (score >= 15) {
+            basic.pause(100)
+            basic.clearScreen()
+            basic.pause(200)
+            basic.showString("You Win!")
+            break;
         }
         while (AiEnabled) {
             snakeMove(angle, false)
