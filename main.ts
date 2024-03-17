@@ -118,6 +118,7 @@ function init () {
     AFy = 0
     AiEnabled = false
     stopped = false
+    shieldEnabled = false
 }
 buttonClicks.onButtonHeld(buttonClicks.AorB.B, function () {
     init()
@@ -128,6 +129,17 @@ buttonClicks.onButtonHeld(buttonClicks.AorB.B, function () {
         Program2()
     }
 })
+function shield () {
+    if (SnakeX < 0) {
+        SnakeX = 0
+    } else if (SnakeY < 0) {
+        SnakeY = 0
+    } else if (SnakeX > 4) {
+        SnakeX = 4
+    } else if (SnakeY > 4) {
+        SnakeY = 4
+    }
+}
 function calculateDistance (x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 }
@@ -146,6 +158,9 @@ function snakeMove (Angle: number, moveEnabled: boolean) {
         } else if (input.rotation(Rotation.Roll) < angle2) {
             SnakeX += -1
             direction = 2
+        }
+        if (shieldEnabled) {
+            shield()
         }
         replayX[cnt] = SnakeX
         replayY[cnt] = SnakeY
@@ -193,6 +208,11 @@ function Main () {
             replayFY[cntSpare] = FoodY
             cntSpare += 1
             generateFood()
+        }
+        if (score == 0 || score % 3 == 0) {
+            shieldEnabled = true
+        } else {
+            shieldEnabled = false
         }
         while (AiEnabled) {
             snakeMove(angle, false)
@@ -266,6 +286,7 @@ let distance = 0
 let rollNum = 0
 let direction = 0
 let angle2 = 0
+let shieldEnabled = false
 let stopped = false
 let AFy = 0
 let AFx = 0
