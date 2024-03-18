@@ -146,7 +146,7 @@ function init () {
     SnakeX = 2
     SnakeY = 2
     lives = 2
-    score = 6
+    score = 0
     Ax = 0
     Ay = 0
     AFx = 0
