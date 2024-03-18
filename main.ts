@@ -1,11 +1,40 @@
-/**
- * special food creation
- */
 function getFood () {
     if (SnakeX == FoodX && SnakeY == FoodY) {
         return true
     } else {
         return false
+    }
+}
+function scoreAni () {
+    if (score <= 5) {
+        for (let scoreCnt = 0; scoreCnt <= score - 1; scoreCnt++) {
+            led.plot(scoreCnt, 0)
+            basic.pause(200)
+        }
+    } else if (5 < score && score <= 10) {
+        for (let scoreCnt = 0; scoreCnt <= 4; scoreCnt++) {
+            led.plot(scoreCnt, 0)
+            basic.pause(200)
+        }
+        for (let scoreCnt = 0; scoreCnt <= score - 5 - 1; scoreCnt++) {
+            led.plot(scoreCnt, 1)
+            basic.pause(200)
+        }
+    } else if (10 < score && score <= 12) {
+        for (let scoreCnt = 0; scoreCnt <= 4; scoreCnt++) {
+            led.plot(scoreCnt, 0)
+            basic.pause(200)
+        }
+        for (let scoreCnt = 0; scoreCnt <= 4; scoreCnt++) {
+            led.plot(scoreCnt, 1)
+            basic.pause(200)
+        }
+        for (let scoreCnt = 0; scoreCnt <= score - 10 - 1; scoreCnt++) {
+            led.plot(scoreCnt, 2)
+            basic.pause(200)
+        }
+    } else {
+        basic.showIcon(IconNames.Happy)
     }
 }
 function Snake () {
@@ -20,6 +49,9 @@ function Snake () {
         . # . # .
         . . # . .
         `)
+    basic.pause(200)
+    basic.clearScreen()
+    scoreAni()
     basic.pause(200)
     basic.clearScreen()
     basic.showNumber(score)
@@ -114,11 +146,12 @@ function init () {
     SnakeX = 2
     SnakeY = 2
     lives = 2
-    score = 0
+    score = 6
     Ax = 0
     Ay = 0
     AFx = 0
     AFy = 0
+    scoreCnt = 0
     AiEnabled = false
     stopped = false
     shieldEnabled = false
@@ -217,7 +250,7 @@ function Main () {
         } else {
             shieldEnabled = false
         }
-        if (score >= 15) {
+        if (score >= 12) {
             basic.pause(100)
             basic.clearScreen()
             basic.pause(200)
@@ -298,6 +331,7 @@ let direction = 0
 let angle2 = 0
 let shieldEnabled = false
 let stopped = false
+let scoreCnt = 0
 let AFy = 0
 let AFx = 0
 let Ay = 0
