@@ -52,7 +52,7 @@ function Snake () {
     basic.pause(200)
     basic.clearScreen()
     scoreAni()
-    basic.pause(200)
+    basic.pause(500)
     basic.clearScreen()
     basic.showNumber(score)
     basic.pause(500)
@@ -60,7 +60,7 @@ function Snake () {
     ReplayMod()
 }
 buttonClicks.onButtonDoubleClicked(buttonClicks.AorB.A, function () {
-    Ai()
+    LaunchAi()
 })
 function showNumber2 (num: number) {
     basic.showNumber(Math.floor(num / 10))
@@ -96,9 +96,6 @@ function death () {
     } else {
         return false
     }
-}
-function Ai () {
-    AiEnabled = true
 }
 function ReplayMod () {
     indexReplay = 0
@@ -175,6 +172,9 @@ function shield () {
     } else if (SnakeY > 4) {
         SnakeY = 4
     }
+}
+function LaunchAi () {
+    AiEnabled = true
 }
 function calculateDistance (x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
@@ -259,33 +259,7 @@ function Main () {
         }
         while (AiEnabled) {
             snakeMove(angle, false)
-            while (!(FoodX == SnakeX && FoodY == SnakeY)) {
-                Ax = SnakeX
-                Ay = SnakeY
-                AFx = FoodX
-                AFy = FoodY
-                if (AFx > Ax) {
-                    SnakeX += 1
-                    direction = 4
-                } else if (AFx < Ax) {
-                    SnakeX += -1
-                    direction = 2
-                } else if (AFy > Ay) {
-                    SnakeY += 1
-                    direction = 3
-                } else if (AFy < Ay) {
-                    SnakeY += -1
-                    direction = 1
-                }
-                replayX[cnt] = SnakeX
-                replayY[cnt] = SnakeY
-                replayDir[cnt] = direction
-                cnt += 1
-                led.plot(SnakeX, SnakeY)
-                basic.pause(200)
-                tailProcess(SnakeX, SnakeY, direction)
-                basic.pause(100)
-            }
+            AiMain()
             AiEnabled = false
         }
     }
@@ -295,6 +269,35 @@ function Program () {
     StartUp()
     adjustAngle()
     Snake()
+}
+function AiMain () {
+    while (!(FoodX == SnakeX && FoodY == SnakeY)) {
+        Ax = SnakeX
+        Ay = SnakeY
+        AFx = FoodX
+        AFy = FoodY
+        if (AFx > Ax) {
+            SnakeX += 1
+            direction = 4
+        } else if (AFx < Ax) {
+            SnakeX += -1
+            direction = 2
+        } else if (AFy > Ay) {
+            SnakeY += 1
+            direction = 3
+        } else if (AFy < Ay) {
+            SnakeY += -1
+            direction = 1
+        }
+        replayX[cnt] = SnakeX
+        replayY[cnt] = SnakeY
+        replayDir[cnt] = direction
+        cnt += 1
+        led.plot(SnakeX, SnakeY)
+        basic.pause(200)
+        tailProcess(SnakeX, SnakeY, direction)
+        basic.pause(100)
+    }
 }
 buttonClicks.onButtonHeld(buttonClicks.AorB.A, function () {
     adjustAngle()
@@ -331,6 +334,7 @@ let direction = 0
 let angle2 = 0
 let shieldEnabled = false
 let stopped = false
+let AiEnabled = false
 let scoreCnt = 0
 let AFy = 0
 let AFx = 0
@@ -351,7 +355,6 @@ let replayXSpare = 0
 let replayFX: number[] = []
 let replayCnt = 0
 let indexReplay = 0
-let AiEnabled = false
 let score = 0
 let FoodY = 0
 let SnakeY = 0
