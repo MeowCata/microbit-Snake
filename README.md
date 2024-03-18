@@ -45,7 +45,7 @@ made by a ***Chinese** middle school student: [DingDang](https://github.com/Meow
 ## Features🎇
 - [x] **controllable snake movement** you can use the parameter(*enabled*, called `moveEnabled` in [*v1.1*](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1)) to control whether the snake moves
 - [x] **food creation & getting food**(*the food production point is at least two dots away from the snake*)
-- [x] **manual tilt angle**(15° 20° *25°(default)* 30°, 4 feels, based on *motion sensor*)
+- [x] **manual tilt angle**(15° 20° ***25°(default)*** 30°, 4 feels, based on *motion sensor*)
 - [x] **snake tail process & trailing effect**
 - [x] **scores & lives!**(default:2 lives)
 - [x] **the whole game replay!** it shows how the snake moved and got food, based on *arrays*
