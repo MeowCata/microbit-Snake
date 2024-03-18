@@ -236,6 +236,7 @@ function Main () {
             }
             SnakeX = 2
             SnakeY = 2
+            shieldEnabled = true
         }
         if (getFood()) {
             snakeMove(angle, false)
