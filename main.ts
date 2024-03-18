@@ -239,7 +239,7 @@ function Main () {
         }
         if (getFood()) {
             snakeMove(angle, false)
-            score += 1
+            score += randint(0, 1)
             replayFX[cntSpare] = FoodX
             replayFY[cntSpare] = FoodY
             cntSpare += 1
