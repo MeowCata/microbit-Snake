@@ -8,7 +8,7 @@ made by a ***Chinese** middle school student: [DingDang](https://github.com/Meow
 **Please follow the open-source protocol! *Enjoy!***
 
 ---
-[Star this Project!](https://github.com/MeowCata/microbit-Snake#star)
+[Star this Project!](https://github.com/MeowCata/microbit-Snake?tab=star)
 ---
 
 ## How to play it?
