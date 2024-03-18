@@ -50,7 +50,7 @@ made by a ***Chinese** middle school student: [DingDang](https://github.com/Meow
 - [x] **scores & lives!**(default:2 lives)
 - [x] **the whole game replay!** it shows how the snake moved and got food, based on *arrays*
 - [x] **Ai!(only in [*v1.1*](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1))** *double click `Btn-A` to launch*, it will automatically help you eat food(one launch for one food **:D**)
-- [x] **Shield!(only in [*v1.1*](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1))** **if the remainder of the score divided by 3 is 0** or **score equals to 0**,you won't die until your score changed
+- [x] **Shield!(only in [*v1.1*](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1))** **if the remainder of the score divided by 3 is 0** or **score equals to 0**, you won't die(move out of the screen) until your score changed
 - [ ] Snake lengthening. for some reason(~~it's obviously not that I can't do it...~~), an lengthened snake will block the screen, resulting in a limited range of food creating
 - [ ] Obstacles. the snakes loses one *live* when it touches them, but it's hard to tell which bright spots(dots) are food and which are obstacles
 
