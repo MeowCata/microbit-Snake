@@ -29,7 +29,7 @@ made by a ***Chinese** middle school student: [DingDang](https://github.com/Meow
 >     HOWEVER, you have 2 lives and you will "respawn(it is so-called in Minecraft)"in the middle of the screen
 > 
 >     BUT, because of some bugs(that were not fixed),if you were tilting when you died,the respawn point might not be in the middle
-> ***you won't die again although the respawn point wasn't in the middle:) and in [*v1.1*](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1))or later version, the shield will enabled after respawning***
+> ***you won't die again although the respawn point wasn't in the middle:) and in [*v1.1*](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1)or later version, the shield will enable after respawning/spawning***
 > 
 >**5.If your lives were all ran out,you *died*,then you can watch the whole game replay,it shows all the food you ate and all the ways your snake *walked*(shows the score you earned in [*v1.1*](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1))**
 > 
