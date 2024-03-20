@@ -131,6 +131,21 @@ function clearScreenExcept (x: number, y: number) {
         }
     }
 }
+function AiProcess () {
+    if (FoodX > SnakeX) {
+        SnakeX += 1
+        direction = 4
+    } else if (FoodX < SnakeX) {
+        SnakeX += -1
+        direction = 2
+    } else if (FoodY > SnakeY) {
+        SnakeY += 1
+        direction = 3
+    } else if (FoodY < SnakeY) {
+        SnakeY += -1
+        direction = 1
+    }
+}
 function init () {
     startTime += 1
     replayX = []
@@ -176,18 +191,6 @@ function LaunchAi () {
 function calculateDistance (x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 }
-input.onButtonPressed(Button.B, function () {
-    serial.redirectToUSB()
-    serial.writeLine("angle: " + angle)
-    serial.writeLine("FoodX: " + FoodX)
-    serial.writeLine("FoodY: " + FoodY)
-    serial.writeLine("SnakeX: " + SnakeX)
-    serial.writeLine("SnakeY: " + SnakeY)
-    serial.writeLine("score: " + score)
-    serial.writeLine("lives(remaining): " + lives)
-    serial.writeLine("shieldEnable: " + shieldEnabled)
-    serial.writeLine("-------------")
-})
 function snakeMove (Angle: number, moveEnabled: boolean) {
     if (moveEnabled) {
         angle2 = 0 - Angle
@@ -281,19 +284,7 @@ function Program () {
 }
 function AiMain () {
     while (!(FoodX == SnakeX && FoodY == SnakeY)) {
-        if (FoodX > SnakeX) {
-            SnakeX += 1
-            direction = 4
-        } else if (FoodX < SnakeX) {
-            SnakeX += -1
-            direction = 2
-        } else if (FoodY > SnakeY) {
-            SnakeY += 1
-            direction = 3
-        } else if (FoodY < SnakeY) {
-            SnakeY += -1
-            direction = 1
-        }
+        AiProcess()
         replayX[cnt] = SnakeX
         replayY[cnt] = SnakeY
         replayDir[cnt] = direction
@@ -335,7 +326,6 @@ function generateFood () {
 }
 let distance = 0
 let rollNum = 0
-let direction = 0
 let angle2 = 0
 let antiCrash = false
 let shieldEnabled = false
@@ -345,6 +335,7 @@ let scoreCnt = 0
 let lives = 0
 let cntSpare = 0
 let cnt = 0
+let direction = 0
 let replayDir: number[] = []
 let replayDirS = 0
 let replayFY: number[] = []
