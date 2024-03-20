@@ -12,25 +12,25 @@ function scoreAni () {
             basic.pause(200)
         }
     } else if (5 < score && score <= 10) {
-        for (let scoreCnt = 0; scoreCnt <= 4; scoreCnt++) {
-            led.plot(scoreCnt, 0)
+        for (let scoreCnt2 = 0; scoreCnt2 <= 4; scoreCnt2++) {
+            led.plot(scoreCnt2, 0)
             basic.pause(200)
         }
-        for (let scoreCnt = 0; scoreCnt <= score - 5 - 1; scoreCnt++) {
-            led.plot(scoreCnt, 1)
+        for (let scoreCnt3 = 0; scoreCnt3 <= score - 5 - 1; scoreCnt3++) {
+            led.plot(scoreCnt3, 1)
             basic.pause(200)
         }
     } else if (10 < score && score <= 12) {
-        for (let scoreCnt = 0; scoreCnt <= 4; scoreCnt++) {
-            led.plot(scoreCnt, 0)
+        for (let scoreCnt4 = 0; scoreCnt4 <= 4; scoreCnt4++) {
+            led.plot(scoreCnt4, 0)
             basic.pause(200)
         }
-        for (let scoreCnt = 0; scoreCnt <= 4; scoreCnt++) {
-            led.plot(scoreCnt, 1)
+        for (let scoreCnt5 = 0; scoreCnt5 <= 4; scoreCnt5++) {
+            led.plot(scoreCnt5, 1)
             basic.pause(200)
         }
-        for (let scoreCnt = 0; scoreCnt <= score - 10 - 1; scoreCnt++) {
-            led.plot(scoreCnt, 2)
+        for (let scoreCnt6 = 0; scoreCnt6 <= score - 10 - 1; scoreCnt6++) {
+            led.plot(scoreCnt6, 2)
             basic.pause(200)
         }
     } else {
@@ -159,7 +159,7 @@ function init () {
     SnakeY = 2
     lives = 2
     score = 0
-    scoreCnt = 0
+    scoreCnt7 = 0
     AiEnabled = false
     stopped = false
     shieldEnabled = false
@@ -191,6 +191,18 @@ function LaunchAi () {
 function calculateDistance (x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 }
+input.onButtonPressed(Button.B, function () {
+    serial.redirectToUSB()
+    serial.writeLine("angle: " + angle)
+    serial.writeLine("FoodX: " + FoodX)
+    serial.writeLine("FoodY: " + FoodY)
+    serial.writeLine("SnakeX: " + SnakeX)
+    serial.writeLine("SnakeY: " + SnakeY)
+    serial.writeLine("score: " + score)
+    serial.writeLine("lives(remaining): " + lives)
+    serial.writeLine("shieldEnable: " + shieldEnabled)
+    serial.writeLine("-------------")
+})
 function snakeMove (Angle: number, moveEnabled: boolean) {
     if (moveEnabled) {
         angle2 = 0 - Angle
@@ -331,7 +343,7 @@ let antiCrash = false
 let shieldEnabled = false
 let stopped = false
 let AiEnabled = false
-let scoreCnt = 0
+let scoreCnt7 = 0
 let lives = 0
 let cntSpare = 0
 let cnt = 0
