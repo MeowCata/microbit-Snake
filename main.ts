@@ -289,16 +289,16 @@ function AiMain () {
         Ay = SnakeY
         AFx = FoodX
         AFy = FoodY
-        if (AFx > Ax) {
+        if (FoodX > SnakeX) {
             SnakeX += 1
             direction = 4
-        } else if (AFx < Ax) {
+        } else if (FoodX < SnakeX) {
             SnakeX += -1
             direction = 2
-        } else if (AFy > Ay) {
+        } else if (FoodY > SnakeY) {
             SnakeY += 1
             direction = 3
-        } else if (AFy < Ay) {
+        } else if (FoodY < SnakeY) {
             SnakeY += -1
             direction = 1
         }
