@@ -70,7 +70,7 @@ function showNumber2 (num: number) {
 }
 function adjustAngle () {
     basic.showNumber(angle)
-    while (!(input.buttonIsPressed(Button.AB))) {
+    while (!(input.buttonIsPressed(Button.A))) {
         if (input.rotation(Rotation.Roll) < -30) {
             angle += -5
             if (angle < 15) {
@@ -152,6 +152,7 @@ function init () {
     AiEnabled = false
     stopped = false
     shieldEnabled = false
+    antiCrash = false
 }
 buttonClicks.onButtonHeld(buttonClicks.AorB.B, function () {
     init()
@@ -179,6 +180,18 @@ function LaunchAi () {
 function calculateDistance (x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 }
+input.onButtonPressed(Button.B, function () {
+    serial.redirectToUSB()
+    serial.writeLine("angle: " + angle)
+    serial.writeLine("FoodX: " + FoodX)
+    serial.writeLine("FoodY: " + FoodY)
+    serial.writeLine("SnakeX: " + SnakeX)
+    serial.writeLine("SnakeY: " + SnakeY)
+    serial.writeLine("score: " + score)
+    serial.writeLine("lives(remaining): " + lives)
+    serial.writeLine("shieldEnable: " + shieldEnabled)
+    serial.writeLine("-------------")
+})
 function snakeMove (Angle: number, moveEnabled: boolean) {
     if (moveEnabled) {
         angle2 = 0 - Angle
@@ -223,9 +236,6 @@ function Program2 () {
     StartUp()
     Snake()
 }
-buttonClicks.onButtonDoubleClicked(buttonClicks.AorB.B, function () {
-    stopped = true
-})
 function Main () {
     while (!(stopped)) {
         snakeMove(angle, true)
@@ -237,8 +247,10 @@ function Main () {
             SnakeX = 2
             SnakeY = 2
             shieldEnabled = true
+            antiCrash = true
         }
         if (getFood()) {
+            antiCrash = false
             snakeMove(angle, false)
             score += randint(0, 1)
             replayFX[cntSpare] = FoodX
@@ -246,7 +258,7 @@ function Main () {
             cntSpare += 1
             generateFood()
         }
-        if (score == 0 || score % 3 == 0) {
+        if (score == 0 || score % 3 == 0 || antiCrash == true) {
             shieldEnabled = true
         } else {
             shieldEnabled = false
@@ -301,7 +313,7 @@ function AiMain () {
     }
 }
 buttonClicks.onButtonHeld(buttonClicks.AorB.A, function () {
-    adjustAngle()
+    stopped = true
 })
 function StartUp () {
     rollNum = -5
@@ -333,6 +345,7 @@ let distance = 0
 let rollNum = 0
 let direction = 0
 let angle2 = 0
+let antiCrash = false
 let shieldEnabled = false
 let stopped = false
 let AiEnabled = false
