@@ -144,10 +144,6 @@ function init () {
     SnakeY = 2
     lives = 2
     score = 0
-    Ax = 0
-    Ay = 0
-    AFx = 0
-    AFy = 0
     scoreCnt = 0
     AiEnabled = false
     stopped = false
@@ -285,10 +281,6 @@ function Program () {
 }
 function AiMain () {
     while (!(FoodX == SnakeX && FoodY == SnakeY)) {
-        Ax = SnakeX
-        Ay = SnakeY
-        AFx = FoodX
-        AFy = FoodY
         if (FoodX > SnakeX) {
             SnakeX += 1
             direction = 4
@@ -350,10 +342,6 @@ let shieldEnabled = false
 let stopped = false
 let AiEnabled = false
 let scoreCnt = 0
-let AFy = 0
-let AFx = 0
-let Ay = 0
-let Ax = 0
 let lives = 0
 let cntSpare = 0
 let cnt = 0
