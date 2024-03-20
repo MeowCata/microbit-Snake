@@ -8,10 +8,8 @@
         "radio": "*"
     },
     "files": [
-        "main.blocks",
         "main.ts",
-        "README.md",
-        "main.py"
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
