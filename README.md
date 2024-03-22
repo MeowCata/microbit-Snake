@@ -15,8 +15,12 @@ could u plz star this repository? thank u very much😊
 
 ---
 > [!IMPORTANT]
-> **support all micro:bit versions!** my goal is *to make FULL use of micro:bit without an extension board*
+> **support all micro:bit versions!**
 > 
+> my goal is *to make FULL use of micro:bit without an extension board*
+>
+> *v1.1*+ means version 1.1 or higher
+
 ## All Versions: 
 > [v1.3(*recommended*)](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.3)
 >
@@ -54,6 +58,7 @@ could u plz star this repository? thank u very much😊
 > ***you won't die again although the respawn point wasn't in the middle:) and in *v1.1* or later version, the shield will enable after respawning/spawning***
 > 
 >**5.If your lives were all ran out,you *died*,then you can watch the whole game replay,it shows all the food you ate and all the ways your snake *walked*(shows the score you earned in *v1.1*+, score animation only in *v1.2*+)**
+> **6.Winning! only *v1.2*+ | when score>=12,show score animation(plot dots as your score) and you win!**
 > 
 > *this project really took a long time to make...*
 >
@@ -66,7 +71,7 @@ could u plz star this repository? thank u very much😊
 - [x] **food creation & getting food**(*the food production point is at least two dots away from the snake*)
 - [x] **manual tilt angle**(15° 20° ***25°(default)*** 30°, 4 feels, based on *motion sensor*)
 - [x] **snake tail process & trailing effect**
-- [x] **scores & lives!**(default:2 lives)
+- [x] **scores & lives!**(default:2 lives) score animation only *v1.2*+
 - [x] **the whole game replay!** it shows how the snake moved and got food, based on *arrays*
 - [x] **Ai!(only in *v1.1*+)** *double click `Btn-A` to launch*, it will automatically help you eat food(one launch for one food **:D**)
 - [x] **Shield!(only in *v1.1*+)** **if the remainder of the score divided by 3 is 0** or **score equals to 0**, you won't die(move out of the screen) until your score changed| enable shield after respawning(in v1.2+)
