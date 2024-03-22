@@ -35,6 +35,9 @@ could u plz star this repository? thank u very much😊
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/MeowCata/microbit-Snake)
 
+### View Source
+[click here](https://github.com/MeowCata/microbit-Snake/blob/master/main.ts)
+
 ## How to play it?
 * First,you should have a micro:bit,it's a **Pocket Programming Computer**.
 
