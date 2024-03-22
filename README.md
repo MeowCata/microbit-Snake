@@ -7,18 +7,29 @@ made by a ***Chinese** middle school student: [DingDang](https://github.com/Meow
 
 **Please follow the open-source protocol! *Enjoy!***
 
+*If u find bugs while using, why not write an issue? this can help develop this project&I will fix it ASAP*
+
+*Also, if you have creative ideas about this project, share it! please send me an email: 2797663076@qq.com*😆
+
+could u plz star this repository? thank u very much😊
+
 ---
 > [!IMPORTANT]
 > **support all micro:bit versions!** my goal is *to make FULL use of micro:bit without an extension board*
 > 
 ## All Versions: 
 > [v1.3(*recommended*)](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.3)
-> 
+>
 > [v1.2](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.2Dev)
-> 
+>
 > [v1.1](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1)
 >
 > [v1.0](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.0)
+
+## Info
+![GitHub repo size](https://img.shields.io/github/repo-size/MeowCata/microbit-Snake)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/MeowCata/microbit-Snake)
 
 ## How to play it?
 * First,you should have a micro:bit,it's a **Pocket Programming Computer**.
