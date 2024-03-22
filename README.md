@@ -1,7 +1,7 @@
 
 > Open this page at [https://meowcata.github.io/microbit-Snake/](https://meowcata.github.io/microbit-Snake/)
 
-open-source snake game based on **micro:bit**
+an open-source snake game based on **micro:bit**
 
 made by a ***Chinese** middle school student: [DingDang](https://github.com/MeowCata)*
 
@@ -9,8 +9,16 @@ made by a ***Chinese** middle school student: [DingDang](https://github.com/Meow
 
 ---
 > [!IMPORTANT]
-> **support all micro:bit versions!** "[*v1.1*](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1)"*means v1.1 and later versions*,**any special changes will be explained separately**
+> **support all micro:bit versions!** my goal is *to make FULL use of micro:bit without an extension board*
 > 
+## All Versions: 
+> [v1.3(*recommended*)](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.3)
+> 
+> [v1.2](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.2Dev)
+> 
+> [v1.1](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1)
+>
+> [v1.0](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.0)
 
 ## How to play it?
 * First,you should have a micro:bit,it's a **Pocket Programming Computer**.
@@ -23,7 +31,7 @@ made by a ***Chinese** middle school student: [DingDang](https://github.com/Meow
 > 
 > **2.Next,tilt your micro:bit to adjust angle(*this angle is the tilt angle that allows the snake to move one block/dot*)**
 >
->     the angle you chose will be displayed on the screen   if you want to continue,press `Btn-A`(press A+B in v1.1)
+>     the angle you chose will be displayed on the screen   if you want to continue,press `Btn-A`(press A+B in v1.1)  press `Btn-A` in v1.2+ 
 > 
 > **3.Play!Tilt your micro:bit to make the snake move to the food and **EAT it**. Then,look for another food!(press `Btn-A` to quit in *v1.0*,double click `Btn-B` in *v1.1*,hold `Btn-A`in *v1.2*+)**
 >
@@ -36,22 +44,23 @@ made by a ***Chinese** middle school student: [DingDang](https://github.com/Meow
 > 
 >**5.If your lives were all ran out,you *died*,then you can watch the whole game replay,it shows all the food you ate and all the ways your snake *walked*(shows the score you earned in *v1.1*+, score animation only in *v1.2*+)**
 > 
-> *this function really took a long time to make...*
+> *this project really took a long time to make...*
 >
 > okay,that's all for this time | *have a nice day~*
 
 ---
 
 ## Features🎇
-- [x] **controllable snake movement** you can use the parameter(*enabled*, called `moveEnabled` in [*v1.1*](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.1)+) to control whether the snake moves
+- [x] **controllable snake movement** you can use the parameter(*enabled*, called `moveEnabled` in *v1.1*+) to control whether the snake moves
 - [x] **food creation & getting food**(*the food production point is at least two dots away from the snake*)
 - [x] **manual tilt angle**(15° 20° ***25°(default)*** 30°, 4 feels, based on *motion sensor*)
 - [x] **snake tail process & trailing effect**
 - [x] **scores & lives!**(default:2 lives)
 - [x] **the whole game replay!** it shows how the snake moved and got food, based on *arrays*
 - [x] **Ai!(only in *v1.1*+)** *double click `Btn-A` to launch*, it will automatically help you eat food(one launch for one food **:D**)
-- [x] **Shield!(only in *v1.1*+)** **if the remainder of the score divided by 3 is 0** or **score equals to 0**, you won't die(move out of the screen) until your score changed| enable shield after respawning(in [v1.2](https://github.com/MeowCata/microbit-Snake/releases/tag/v1.2Dev)+)
-- [ ] Snake lengthening. for some reason(~~it's obviously not that I can't do it...~~), an lengthened snake will block the screen, resulting in a limited range of food creating
+- [x] **Shield!(only in *v1.1*+)** **if the remainder of the score divided by 3 is 0** or **score equals to 0**, you won't die(move out of the screen) until your score changed| enable shield after respawning(in v1.2+)
+### Pities😭
+- [ ] Snake lengthening. However, an lengthened snake will block the screen, and micro:bit only has an `5x5 LED screen`
 - [ ] Obstacles. the snakes loses one *live* when it touches them, but it's hard to tell which bright spots(dots) are food and which are obstacles
 
 ## Functions🎲
