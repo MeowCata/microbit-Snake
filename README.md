@@ -9,7 +9,7 @@ made by a ***Chinese** middle school student: [DingDang](https://github.com/Meow
 
 *If u find bugs while using, why not write an issue? this can help develop this project&I will fix it ASAP*
 
-*Also, if you have creative ideas about this project, share it! please send me an email: 2797663076@qq.com*😆
+*Also, if you have creative ideas about this project, share it! please send me an email: 2797663076@qq.com* or write down in [Discussion](https://github.com/MeowCata/microbit-Snake/discussions)😆
 
 could u plz star this repository? thank u very much😊
 
