@@ -151,7 +151,6 @@ function init() {
     scoreCnt5 = 0
     scoreCnt6 = 0
     scoreCnt7 = 0
-    aiStep = 0
     AiEnabled = false
     stopped = false
     shieldEnabled = false
@@ -275,7 +274,7 @@ function Main() {
         }
         while (AiEnabled) {
             snakeMove(angle, false)
-            AiMain("normal")
+            AiMain()
             AiEnabled = false
         }
     }
@@ -287,7 +286,6 @@ function Program() {
     Snake()
 }
 function AiProcess() {
-    aiStep = 0
     if (FoodX > SnakeX) {
         SnakeX += 1
         direction = 4
@@ -302,8 +300,8 @@ function AiProcess() {
         direction = 1
     }
 }
-function AiMain(aiMode: string) {
-    while (!(FoodX == SnakeX && FoodY == SnakeY)) {
+function AiMain() {
+    while ( !(FoodX == SnakeX && FoodY == SnakeY) ) {
         AiProcess()
         replayX[cnt] = SnakeX
         replayY[cnt] = SnakeY
@@ -344,6 +342,7 @@ function generateFood() {
         led.plot(FoodX, FoodY)
     }
 }
+
 let distance = 0
 let rollNum = 0
 let angle2 = 0
@@ -379,7 +378,6 @@ let FoodY = 0
 let SnakeY = 0
 let FoodX = 0
 let SnakeX = 0
-let aiStep = 0
 let angle = 0
 let startTime = 0
 led.setBrightness(100)
