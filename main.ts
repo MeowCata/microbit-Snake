@@ -99,7 +99,6 @@ function death() {
 }
 function ReplayMod() {
     indexReplay = 0
-    replayCnt = 0
     for (let index = 0; index <= replayFX.length - 1; index++) {
         replayXSpare = replayX[index]
         replayYSpare = replayY[index]
@@ -371,7 +370,6 @@ let replayYSpare = 0
 let replayX: number[] = []
 let replayXSpare = 0
 let replayFX: number[] = []
-let replayCnt = 0
 let indexReplay = 0
 let score = 0
 let FoodY = 0
