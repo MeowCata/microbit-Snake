@@ -63,6 +63,7 @@ could u plz star this repository? thank u very much😊
 > ***you won't die again although the respawn point wasn't in the middle:) and in *v1.1* or later version, the shield will enable after respawning/spawning***
 > 
 >**5.If your lives were all ran out,you *died*,then you can watch the whole game replay,it shows all the food you ate and all the ways your snake *walked*(shows the score you earned in *v1.1*+, score animation only in *v1.2*+)**
+> 
 > **6.Winning! only *v1.2*+ | when score>=12,show score animation(plot dots as your score) and you win!**
 > 
 > *this project really took a long time to make...*
