@@ -1,6 +1,6 @@
 
 > Open this page at [https://meowcata.github.io/microbit-Snake/](https://meowcata.github.io/microbit-Snake/)
-
+> My GitHub Page: [Click](https://meowcata.github.io/)
 an open-source snake game based on **micro:bit**
 
 made by a ***Chinese** middle school student: [DingDang](https://github.com/MeowCata)*
