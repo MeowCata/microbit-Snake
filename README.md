@@ -5,7 +5,9 @@
 
 an open-source snake game based on **micro:bit**
 
-made by a ***Chinese** middle school student: [DingDang](https://github.com/MeowCata)*
+made by a ***Chinese** middle school student: [DingDang](https://github.com/MeowCata)*b
+
+DOCX type introduction(only Simplified Chinese): [Here](https://github.com/MeowCata/snake-docx)
 
 **Please follow the open-source protocol! *Enjoy!***
 
