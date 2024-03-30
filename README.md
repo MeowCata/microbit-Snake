@@ -90,7 +90,7 @@ could u plz star this repository? thank u very much😊
 ## Functions🎲
 * **Start:** press `Btn-B` in v1.0, hold `Btn-B` in v1.1 and v1.2
 * **Adjust the Angle:** hold `Btn-A` in both v1.0&v1.1, removed in v1.2&1.3
-* **Stop:** press `Btn-A` in v1.0, double click `Btn-B` in v1.1, hold `Btn-A` in v1.2&v1.3
+* **Stop:** press `Btn-A` in v1.0, double click `Btn-B` in v1.1, hold `Btn-A` in v1.2, removed in v1.3
 * **Ai(only in *v1.1*+):** double click `Btn-A`
 * **Data Sending to Computer** only in v1.2&v1.3
 
