@@ -379,13 +379,9 @@ function Program() {
     Snake()
 }
 
-
-
-
-
-buttonClicks.onButtonHeld(buttonClicks.AorB.A, function () {
+/*buttonClicks.onButtonHeld(buttonClicks.AorB.A, function () {
     stopped = true
-})
+})*/
 buttonClicks.onButtonHeld(buttonClicks.AorB.B, function () {
     init()
     basic.clearScreen()
