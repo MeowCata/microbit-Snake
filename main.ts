@@ -229,7 +229,7 @@ function Main () {
         if (getFood()) {
             antiShieldCrash = false
             snakeMove(angle, false)
-            score += randint(0, 1)
+            score += 1
             replayFX[cntSpare] = FoodX
             replayFY[cntSpare] = FoodY
             cntSpare += 1
@@ -240,8 +240,8 @@ function Main () {
         } else {
             shieldEnabled = false
         }
-        if (score >= 12) {
-            basic.pause(100)
+        if (score >= 20) {
+            basic.pause(200)
             basic.clearScreen()
             basic.pause(200)
             basic.showString("You Win!")
