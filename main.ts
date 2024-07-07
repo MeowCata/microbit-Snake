@@ -5,13 +5,6 @@ let antiShieldCrash = false
 let shieldEnabled = false
 let stopped = false
 let AiEnabled = false
-let scoreCnt7 = 0
-let scoreCnt6 = 0
-let scoreCnt5 = 0
-let scoreCnt4 = 0
-let scoreCnt3 = 0
-let scoreCnt2 = 0
-let scoreCnt = 0
 let lives = 0
 let cntSpare = 0
 let cnt = 0
@@ -56,6 +49,7 @@ function StartUp() {
     basic.clearScreen()
     rollNum = -5
 }
+
 function adjustAngle() {
     basic.showNumber(angle)
     while (!(input.buttonIsPressed(Button.A))) {
@@ -78,12 +72,14 @@ function adjustAngle() {
     basic.pause(200)
     showNumber2(angle)
 }
+
 function showNumber2(num: number) {
     basic.showNumber(Math.floor(num / 10))
     basic.showNumber(num - Math.floor(num / 10) * 10)
     basic.pause(100)
     basic.clearScreen()
 }
+
 function snakeMove(Angle: number, moveEnabled: boolean) {
     if (moveEnabled) {
         angle2 = 0 - Angle
@@ -113,6 +109,7 @@ function snakeMove(Angle: number, moveEnabled: boolean) {
         basic.pause(100)
     }
 }
+
 function tailProcess(x: number, y: number, dir: number) {
     if (dir == 3) {
         led.unplot(x, y - 1)
@@ -124,9 +121,11 @@ function tailProcess(x: number, y: number, dir: number) {
         led.unplot(x + 1, y)
     }
 }
+
 function calculateDistance(x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 }
+
 function generateFood() {
     FoodX = randint(0, 4)
     FoodY = randint(0, 4)
@@ -137,6 +136,7 @@ function generateFood() {
         led.plot(FoodX, FoodY)
     }
 }
+
 function getFood() {
     if (SnakeX == FoodX && SnakeY == FoodY) {
         return true
@@ -169,6 +169,7 @@ function ReplayMod() {
     basic.pause(500)
     clearScreenExcept(-1, -1, -1, -1)
 }
+
 function death() {
     if (SnakeX < 0 || SnakeX > 4 || (SnakeY < 0 || SnakeY > 4)) {
         return true
@@ -176,6 +177,7 @@ function death() {
         return false
     }
 }
+
 function shield() {
     if (SnakeX < 0) {
         SnakeX = 0
@@ -187,6 +189,7 @@ function shield() {
         SnakeY = 4
     }
 }
+
 function AiProcess() {
     if (FoodX > SnakeX) {
         SnakeX += 1
@@ -202,6 +205,7 @@ function AiProcess() {
         direction = 1
     }
 }
+
 function AiMain() {
     while (!(FoodX == SnakeX && FoodY == SnakeY)) {
         AiProcess()
@@ -215,6 +219,7 @@ function AiMain() {
         basic.pause(100)
     }
 }
+
 function Main() {
     while (!(stopped)) {
         snakeMove(angle, true)
@@ -258,38 +263,6 @@ function Main() {
     basic.pause(500)
 }
 
-function scoreAni() {
-    if (score <= 5) {
-        for (let scoreCnt = 0; scoreCnt <= score - 1; scoreCnt++) {
-            led.plot(scoreCnt, 0)
-            basic.pause(200)
-        }
-    } else if (5 < score && score <= 10) {
-        for (let scoreCnt2 = 0; scoreCnt2 <= 4; scoreCnt2++) {
-            led.plot(scoreCnt2, 0)
-            basic.pause(200)
-        }
-        for (let scoreCnt3 = 0; scoreCnt3 <= score - 5 - 1; scoreCnt3++) {
-            led.plot(scoreCnt3, 1)
-            basic.pause(200)
-        }
-    } else if (10 < score && score <= 12) {
-        for (let scoreCnt4 = 0; scoreCnt4 <= 4; scoreCnt4++) {
-            led.plot(scoreCnt4, 0)
-            basic.pause(200)
-        }
-        for (let scoreCnt5 = 0; scoreCnt5 <= 4; scoreCnt5++) {
-            led.plot(scoreCnt5, 1)
-            basic.pause(200)
-        }
-        for (let scoreCnt6 = 0; scoreCnt6 <= score - 10 - 1; scoreCnt6++) {
-            led.plot(scoreCnt6, 2)
-            basic.pause(200)
-        }
-    } else {
-        basic.showIcon(IconNames.Happy)
-    }
-}
 function Snake() {
     generateFood()
     Main()
@@ -303,9 +276,6 @@ function Snake() {
         . . # . .
         `)
     basic.pause(200)
-    basic.clearScreen()
-    scoreAni()
-    basic.pause(500)
     basic.clearScreen()
     basic.showNumber(score)
     basic.pause(500)
@@ -336,13 +306,6 @@ function init() {
     SnakeY = 2
     lives = 2
     score = 0
-    scoreCnt = 0
-    scoreCnt2 = 0
-    scoreCnt3 = 0
-    scoreCnt4 = 0
-    scoreCnt5 = 0
-    scoreCnt6 = 0
-    scoreCnt7 = 0
     AiEnabled = false
     stopped = false
     shieldEnabled = false
