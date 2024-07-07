@@ -1,5 +1,3 @@
-#### Click [HERE](https://github.com/MeowCata/microbit-Snake/blob/master/illustration.md) to read illustrations
-#### 点击 [此处](https://github.com/MeowCata/microbit-Snake/blob/master/illustration.md) 查看关于此项目的说明
 > Open this page at [https://meowcata.github.io/microbit-Snake/](https://meowcata.github.io/microbit-Snake/)
 
 ## Use as Extension
