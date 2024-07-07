@@ -3,9 +3,7 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "microbit-pxt-clicks": "github:bsiever/microbit-pxt-clicks#v0.2.2",
-        "microphone": "*",
-        "radio": "*"
+        "microbit-pxt-clicks": "github:bsiever/microbit-pxt-clicks#v0.2.2"
     },
     "files": [
         "main.ts",
