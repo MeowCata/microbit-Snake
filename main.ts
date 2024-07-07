@@ -229,11 +229,14 @@ function Main () {
         if (getFood()) {
             antiShieldCrash = false
             snakeMove(angle, false)
+            score += 1
+            replayX[cnt] = FoodX
+            replayY[cnt] = FoodY
+            cnt += 1
             replayX[cnt] = SnakeX
             replayY[cnt] = SnakeY
             replayDir[cnt] = direction
             cnt += 1
-            score += 1
             replayFX[cntSpare] = FoodX
             replayFY[cntSpare] = FoodY
             cntSpare += 1
