@@ -71,7 +71,7 @@ function ReplayMod () {
         replayFYSpare = replayFY[indexReplayLoop]
         replayDirS = replayDir[indexReplayLoop]
         led.plot(replayFXSpare, replayFYSpare)
-        while (!(replayXSpare == replayFXSpare && replayYSpare == replayFYSpare)) {
+        while (replayXSpare != replayFXSpare || replayYSpare != replayFYSpare) {
             replayXSpare = replayX[indexReplayLoop + indexReplay]
             replayYSpare = replayY[indexReplayLoop + indexReplay]
             replayDirS = replayDir[indexReplayLoop + indexReplay]
