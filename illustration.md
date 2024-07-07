@@ -1,4 +1,3 @@
-### 推荐使用[SnakePro](https://github.com/MeowCata/SnakePro)存储库导入，存储库为v1.5版本的Release
 #### 非常遗憾，由于MakeCode加载项目需要读取README.md，先前将说明放在自述文件使得体积过大，易导致MakeCode加载项目失败，现将说明移至此处，感谢支持
 #### I apologize for the inconvenience, as MakeCode needs to read the README. md file to load the project.  Previously, the instructions were placed in the README. md file, which made the file too large and caused MakeCode to fail to load the project.  I have moved the instructions here, and thank you for your support.
 > Open this page at [https://meowcata.github.io/microbit-Snake/](https://meowcata.github.io/microbit-Snake/)
