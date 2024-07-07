@@ -80,7 +80,6 @@ function ReplayMod () {
             basic.pause(200)
             tailProcess(replayXSpare, replayYSpare, replayDirS)
         }
-        led.unplot(replayXSpare, replayYSpare)
         basic.pause(200)
     }
     basic.pause(500)
@@ -248,9 +247,7 @@ function Main () {
             shieldEnabled = false
         }
         if (score >= 20) {
-            basic.pause(200)
-            basic.clearScreen()
-            basic.pause(200)
+            basic.pause(500)
             basic.showString("You Win!")
             break;
         }
