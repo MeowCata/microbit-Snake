@@ -85,7 +85,7 @@ could u plz star this repository? thank u very much😊
 - [x] **manual tilt angle**(15° 20° ***25°(default)*** 30°, 4 feels, based on *motion sensor*)
 - [x] **snake tail process & trailing effect**
 - [x] **scores & lives!**(default:2 lives) score animation only *v1.2*+
-- [x] **the whole game replay!** it shows how the snake moved and got food, based on *arrays*, but bugs are NOT fixed until v1.5
+- [x] **the whole game replay(like Hypixel :D)!** it shows how the snake moved and got food, based on *arrays*, but bugs are NOT fixed until v1.5
 - [x] **Ai!(only in *v1.1*+)** *double click `Btn-A` to launch*, it will automatically help you eat food(one launch for one food **:D**)
 - [x] **Shield!(only in *v1.1*+)** **if the remainder of the score divided by 3 is 0** or **score equals to 0**, you won't die(move out of the screen) until your score changed| enable shield after respawning(in v1.2+)
 ### Pities😭
