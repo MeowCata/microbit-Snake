@@ -18,10 +18,8 @@ function Snake () {
         . . # . .
         `)
     basic.pause(200)
-    basic.clearScreen()
     basic.showNumber(score)
-    basic.pause(500)
-    basic.clearScreen()
+    basic.pause(200)
     ReplayMod()
 }
 buttonClicks.onButtonDoubleClicked(buttonClicks.AorB.A, function () {
