@@ -18,6 +18,8 @@ function Snake () {
         . . # . .
         `)
     basic.pause(200)
+    basic.clearScreen()
+    basic.pause(100)
     basic.showNumber(score)
     basic.pause(200)
     ReplayMod()
@@ -154,18 +156,6 @@ function LaunchAi () {
 function calculateDistance (x1: number, y1: number, x2: number, y2: number) {
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 }
-input.onButtonPressed(Button.B, function () {
-    serial.redirectToUSB()
-    serial.writeLine("angle: " + angle)
-    serial.writeLine("FoodX: " + FoodX)
-    serial.writeLine("FoodY: " + FoodY)
-    serial.writeLine("SnakeX: " + SnakeX)
-    serial.writeLine("SnakeY: " + SnakeY)
-    serial.writeLine("score: " + score)
-    serial.writeLine("lives(remaining): " + lives)
-    serial.writeLine("shieldEnable: " + shieldEnabled)
-    serial.writeLine("-------------")
-})
 function snakeMove (Angle: number, moveEnabled: boolean) {
     if (moveEnabled) {
         angle2 = 0 - Angle
