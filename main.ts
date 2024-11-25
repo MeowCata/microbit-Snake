@@ -22,6 +22,8 @@ function Snake () {
     basic.pause(100)
     basic.showNumber(score)
     basic.pause(200)
+    basic.clearScreen()
+    basic.pause(100)
     ReplayMod()
 }
 buttonClicks.onButtonDoubleClicked(buttonClicks.AorB.A, function () {
@@ -210,8 +212,14 @@ function Main () {
             }
             SnakeX = 2
             SnakeY = 2
+            led.plot(2, 2)
+            replayX[cnt] = SnakeX
+            replayY[cnt] = SnakeY
+            cnt += 1
             shieldEnabled = true
             antiShieldCrash = true
+            basic.pause(200)
+            continue;
         }
         if (getFood()) {
             antiShieldCrash = false
@@ -234,7 +242,7 @@ function Main () {
         } else {
             shieldEnabled = false
         }
-        if (score >= 20) {
+        if (score >= 30) {
             basic.pause(500)
             basic.showString("You Win!")
             break;
